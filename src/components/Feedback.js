@@ -46,23 +46,23 @@ const Feedback = () => {
     }
   }
   return (
-    <div>
+    <form>
       <label htmlFor="name">Name</label><br/>
       <input type="text" id="name" value={name} onChange={handleName} required /><br/>
       {
-        nameErr && <p>{nameErr}</p>
+        nameErr && <p className="error-message">{nameErr}</p>
       }
       <label htmlFor="email">Email</label><br/>
       <input type="email" id="email" value={email} onChange={handleEmail} /><br/>
       {
-        emailErr && <p>{emailErr}</p>
+        emailErr && <p className="error-message">{emailErr}</p>
       }
       <label htmlFor="password">Password</label><br/>
       <input type="password" id="password" value={password} onChange={handlePassword} /><br/>
       {
-        passwordErr && <p>{passwordErr}</p>
+        passwordErr && <p className="error-message">{passwordErr}</p>
       }
-    </div>
+    </form>
   )
 }
 
